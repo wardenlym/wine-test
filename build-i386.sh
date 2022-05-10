@@ -10,7 +10,7 @@ mkdir build-wine7.8-i386
 cd build-wine7.8-i386
 
 # if use ubuntu22.04
-sudo dpkg --add-architecture i386 
+sudo dpkg --add-architecture i386
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
 wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
