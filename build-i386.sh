@@ -16,7 +16,7 @@ sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
 wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
 sudo mv winehq-jammy.sources /etc/apt/sources.list.d/
 
-# * 处理build-dep错误 You must put some 'deb-src' URIs in your sources.list
+# * deal with build-dep err: You must put some 'deb-src' URIs in your sources.list
 sudo cp /etc/apt/sources.list /etc/apt/sources.list~
 sudo sed -Ei 's/^# deb-src /deb-src /' /etc/apt/sources.list
 sudo apt-get update
@@ -25,7 +25,7 @@ apt-cache show wine-devel:i386=7.8~jammy-1
 sudo apt -y build-dep -y wine-devel
 # sudo apt build-dep wine-devel:i386=7.8~jammy-1
 
-## 编译工具
+## complie tools
 sudo apt install -y make gcc g++ flex bison gettext gcc-mingw-w64
 # necessary i386
 sudo apt install -y gcc-multilib g++-multilib xserver-xorg-dev:i386
