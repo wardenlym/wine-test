@@ -30,10 +30,14 @@ sudo apt install -y gcc-mingw-w64 libasound2-dev libpulse-dev libdbus-1-dev libf
 sudo apt install -y libfaudio-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libmpg123-dev libosmesa6-dev libsdl2-dev libudev-dev libvkd3d-dev libvulkan-dev
 
 # necessary amd32
-sudo apt install gcc-multilib g++-multilib xserver-xorg-dev:i386 libfreetype6-dev:i386
-sudo apt-get install gcc-multilib libasound2-dev:i386 libgsm1-dev:i386 libjpeg8-dev:i386 liblcms2-dev:i386 libldap2-dev:i386 libmpg123-dev:i386 libopenal-dev:i386 libv4l-dev:i386 libx11-dev:i386 libxinerama-dev:i386 libxml2-dev:i386 zlib1g-dev:i386 
-sudo apt-get install libcapi20-dev:i386 libcups2:i386 libdbus-1-3:i386 libfontconfig:i386 libfreetype6:i386 libglu1-mesa:i386 libncurses5:i386 libosmesa6:i386 libsane:i386 libxcomposite1:i386 libxcursor1:i386 libxi6:i386 libxrandr2:i386 libxslt1.1:i386 ocl-icd-libopencl1:i386
-sudo apt-get install libvkd3d-dev:i386 libvulkan-dev:i386
+sudo apt install gcc-multilib g++-multilib xserver-xorg-dev:i386
+# 下面两行是官网页面列表的
+sudo apt install libasound2-dev:i386 libpulse-dev:i386 libdbus-1-dev:i386 libfontconfig-dev:i386 libfreetype-dev:i386 libgnutls28-dev:i386 libpng-dev:i386  libjpeg-dev:i386 libgl-dev:i386 libunwind-dev:i386 libxml2-dev:i386 libxslt1-dev:i386
+sudo apt install libfaudio-dev:i386 libgstreamer1.0-dev:i386 libgstreamer-plugins-base1.0-dev:i386 libmpg123-dev:i386 libosmesa6-dev:i386 libsdl2-dev:i386 libudev-dev:i386 libvkd3d-dev:i386 libvulkan-dev:i386
+
+sudo apt-get install libgsm1-dev:i386 liblcms2-dev:i386 libldap2-dev:i386 libmpg123-dev:i386 libopenal-dev:i386 libv4l-dev:i386 libx11-dev:i386 libxinerama-dev:i386 libxml2-dev:i386 zlib1g-dev:i386 
+#稀有或特定领域
+sudo apt-get install libcapi20-dev:i386 libcups2:i386 libdbus-1-3:i386  libglu1-mesa:i386 libncurses5:i386 libosmesa6:i386 libsane:i386 libxcomposite1:i386 libxcursor1:i386 libxi6:i386 libxrandr2:i386 ocl-icd-libopencl1:i386
 
 # build amd32
 cd build-amd32
@@ -46,4 +50,6 @@ cd build-amd64
 ../wine-source/configure --enable-win64
 make
 
+
+OSS sound system found but too old (OSSv4 needed), OSS won't be supported.
 
