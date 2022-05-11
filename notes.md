@@ -11,3 +11,6 @@ https://dl.winehq.org/wine-builds/android/
 
 ## TODO 升级OSS
 OSS sound system found but too old (OSSv4 needed), OSS won't be supported.
+
+## arm 编译
+https://users.openoffice.narkive.com/cmZLviUZ/wine-re-how-to-recompile-wine-on-arm

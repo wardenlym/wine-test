@@ -35,7 +35,7 @@ sudo apt install -y libasound2-dev:i386 libpulse-dev:i386 libdbus-1-dev:i386 lib
 sudo apt install -y libfaudio-dev:i386 libgstreamer1.0-dev:i386 libgstreamer-plugins-base1.0-dev:i386 libmpg123-dev:i386 libosmesa6-dev:i386 libsdl2-dev:i386 libudev-dev:i386 libvkd3d-dev:i386 libvulkan-dev:i386
 # Rare or domain-specific
 sudo apt install -y libcapi20-dev:i386 liblcms2-dev:i386 libcups2-dev:i386 libgphoto2-dev:i386 libsane-dev:i386 libgsm1-dev:i386 libkrb5-dev:i386 libldap2-dev:i386 samba-dev:i386 ocl-icd-opencl-dev:i386 libpcap-dev:i386 libusb-1.0-0-dev:i386 libv4l-dev:i386
-
+sudo apt install oss4-dev libxcomposite-dev libopenal-dev
 
 ../wine-7.8/configure
 make -j4

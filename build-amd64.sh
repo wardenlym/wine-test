@@ -34,7 +34,7 @@ sudo apt install -y libasound2-dev libpulse-dev libdbus-1-dev libfontconfig-dev 
 sudo apt install -y libfaudio-dev libgstreamer1.0-dev libgstreamer-plugins-base1.0-dev libmpg123-dev libosmesa6-dev libsdl2-dev libudev-dev libvkd3d-dev libvulkan-dev
 # Rare or domain-specific
 sudo apt install -y libcapi20-dev liblcms2-dev libcups2-dev libgphoto2-dev libsane-dev libgsm1-dev libkrb5-dev libldap2-dev samba-dev ocl-icd-opencl-dev libpcap-dev libusb-1.0-0-dev libv4l-dev
-
+sudo apt install oss4-dev libxcomposite-dev libopenal-dev
 
 ../wine-7.8/configure --enable-win64
 make -j4
