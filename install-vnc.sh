@@ -1,14 +1,7 @@
 # aws arm64 ubuntu 安装gnome桌面和vnc
 
 ## 安装
-sudo apt install ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal tigervnc-xorg-extension xserver-xorg-core
-
-sudo apt install gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-
-sudo apt-get install ubuntu-desktop gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal
-
-sudo apt install -y tigervnc-common tigervnc-standalone-server tigervnc-xorg-extension
-
+sudo apt install -y ubuntu-desktop tightvncserver gnome-panel gnome-settings-daemon metacity nautilus gnome-terminal tigervnc-xorg-extension xserver-xorg-core tigervnc-common tigervnc-standalone-server
 
 sudo systemctl enable gdm
 sudo systemctl start gdm
@@ -60,6 +53,8 @@ LD_PRELOAD=/lib/arm-linux-gnueabihf/libgcc_s.so.1 vncserver -localhost no
 
 ## 分辨率
 LD_PRELOAD=/lib/aarch64-linux-gnu/libgcc_s.so.1 vncserver -localhost no -depth 32 -geometry 1680x1050
+
+LD_PRELOAD=/lib/aarch64-linux-gnu/libgcc_s.so.1 vncserver -localhost no -depth 16 -geometry 1680x1050
 
 ## 连接方式
 
