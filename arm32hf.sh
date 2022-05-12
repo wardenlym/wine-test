@@ -25,7 +25,6 @@ sudo apt install -y libcapi20-dev:armhf liblcms2-dev:armhf libcups2-dev:armhf li
 
 sudo apt install oss4-dev:armhf libxcomposite-dev:armhf libopenal-dev:armhf
 
-
 # ../wine-7.8/configure
 PKG_CONFIG_PATH=/usr/lib ../wine-7.8/configure --with-wine64=../build-arm64
 make -j4

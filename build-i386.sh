@@ -37,13 +37,13 @@ sudo apt install -y libfaudio-dev:i386 libgstreamer1.0-dev:i386 libgstreamer-plu
 sudo apt install -y libcapi20-dev:i386 liblcms2-dev:i386 libcups2-dev:i386 libgphoto2-dev:i386 libsane-dev:i386 libgsm1-dev:i386 libkrb5-dev:i386 libldap2-dev:i386 samba-dev:i386 ocl-icd-opencl-dev:i386 libpcap-dev:i386 libusb-1.0-0-dev:i386 libv4l-dev:i386
 sudo apt install oss4-dev libxcomposite-dev libopenal-dev
 
-../wine-7.8/configure
+#../wine-7.8/configure
 # WoW64
 PKG_CONFIG_PATH=/usr/lib32 ../wine-7.8/configure --with-wine64=../build-wine7.8-amd64
-
 make -j4
 
 
-## install
-先安装32位 sudo make install
-再安装64位版
+## install 先安装32版，在安装64位
+cd build-wine7.8-i386 && sudo make install
+cd build-wine7.8-amd64 && sudo make install
+
