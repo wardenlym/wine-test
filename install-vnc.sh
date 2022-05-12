@@ -18,7 +18,7 @@ dbus-launch --exit-with-session gnome-session &
 ```
 
 # 运行方法
-LD_PRELOAD=/lib/aarch64-linux-gnu/libgcc_s.so.1 vncserver -localhost no -depth 32 -geometry 1680x1050
+LD_PRELOAD=/lib/aarch64-linux-gnu/libgcc_s.so.1 vncserver -localhost no -depth 16 -geometry 1680x1050
 # arm 的错误问题 Ubuntu 20.10修复
 https://github.com/TigerVNC/tigervnc/issues/800#issuecomment-565669421
 https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=932499
@@ -56,5 +56,7 @@ LD_PRELOAD=/lib/arm-linux-gnueabihf/libgcc_s.so.1 vncserver -localhost no
 LD_PRELOAD=/lib/aarch64-linux-gnu/libgcc_s.so.1 vncserver -localhost no -depth 16 -geometry 1680x1050
 
 ## 连接方式
+vnc 软件 填入 ip:1
 
-ip:1
+## 锁屏的解决方法
+loginctl unlock-session
