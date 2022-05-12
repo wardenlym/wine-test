@@ -8,25 +8,7 @@ fi
 mkdir build-arm32
 cd build-arm32
 
-## 32位arm
-## maybe add CFLAGS="-mcpu=yourcpu -g -O2" LDFLAGS="-mcpu=yourcpu"
-../configure --host=arm-linux-gnueabihf host_alias=arm-linux-gnueabihf --with-wine-tools=../path/to/your/native/wine/build && make
-
-# ../wine-7.8/configure --host=arm-linux-gnueabi
-# ../wine-7.8/configure --host=aarch64-linux-gnu --with-wine-tools=../build-wine7.8-amd64/tools
-# ../wine-7.8/configure --host=aarch64-linux-gnu --with-wine-tools=../build-wine7.8-amd64
-../wine-7.8/configure --host=aarch64-linux-gnu --with-wine-tools=../build-wine7.8-amd64 --without-freetype --enable-win64
-
-../wine-7.8/configure --host=aarch64-linux-gnu host_alias=aarch64-linux-gnu --with-wine-tools=../build-wine7.8-amd64/ --without-freetype --without-x --enable-win64
-
-## --host=aarch64-linux
-
-## 64位arm aarch64-linux-android
-## 32位arm arm-linux-androideabi
-
-
 sudo dpkg --add-architecture armhf
-
 
 ## complie tools
 sudo apt install -y make gcc g++ flex bison gettext gcc-mingw-w64
@@ -44,6 +26,7 @@ sudo apt install -y libcapi20-dev:armhf liblcms2-dev:armhf libcups2-dev:armhf li
 sudo apt install oss4-dev:armhf libxcomposite-dev:armhf libopenal-dev:armhf
 
 
-../wine-7.8/configure
+# ../wine-7.8/configure
+PKG_CONFIG_PATH=/usr/lib ../wine-7.8/configure --with-wine64=../build-arm64
 make -j4
 

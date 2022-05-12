@@ -9,6 +9,7 @@ fi
 mkdir build-wine7.8-amd64
 cd build-wine7.8-amd64
 
+
 # if use ubuntu22.04
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo mv winehq.key /usr/share/keyrings/winehq-archive.key

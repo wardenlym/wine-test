@@ -9,8 +9,8 @@ fi
 mkdir build-wine7.8-i386
 cd build-wine7.8-i386
 
-# if use ubuntu22.04
 sudo dpkg --add-architecture i386
+# if use ubuntu22.04
 wget -nc https://dl.winehq.org/wine-builds/winehq.key
 sudo mv winehq.key /usr/share/keyrings/winehq-archive.key
 wget -nc https://dl.winehq.org/wine-builds/ubuntu/dists/jammy/winehq-jammy.sources
@@ -38,4 +38,12 @@ sudo apt install -y libcapi20-dev:i386 liblcms2-dev:i386 libcups2-dev:i386 libgp
 sudo apt install oss4-dev libxcomposite-dev libopenal-dev
 
 ../wine-7.8/configure
+# WoW64
+PKG_CONFIG_PATH=/usr/lib32 ../wine-7.8/configure --with-wine64=../build-wine7.8-amd64
+
 make -j4
+
+
+## install
+先安装32位 sudo make install
+再安装64位版
