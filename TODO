@@ -1,0 +1,24 @@
+002c:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+
+wine: Unhandled illegal instruction at address 0000000140002AE0 (thread 0040), starting debugger...
+
+0040:err:seh:start_debugger Couldn't start debugger L"winedbg --auto 60 76" (2)
+
+Read the Wine Developers Guide on how to set up winedbg or another debugger
+
+0048:fixme:actctx:parse_depend_manifests Could not find dependent assembly L"Microsoft.Windows.Common-Controls" (6.0.0.0)
+
+wine: Unhandled illegal instruction at address 000000014000D47C (thread 0048), starting debugger...
+
+0048:err:seh:start_debugger Couldn't start debugger L"winedbg --auto 68 88" (2)
+
+Read the Wine Developers Guide on how to set up winedbg or another debugger
+
+002c:err:winediag:nodrv_CreateWindow Application tried to create a window, but no driver could be loaded.
+
+002c:err:winediag:nodrv_CreateWindow L"The explorer process failed to start."
+
+###
+wine: could not load kernel32.dll, status c0000135
+PKG_CONFIG_PATH=/usr/lib
+
